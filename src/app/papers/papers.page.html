@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Papers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Questions</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let paper of papers">
+      <ion-label>{{ paper }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <form (ngSubmit)="add(f)" #f="ngForm">
+    <ion-item>
+      <ion-label position="floating">Paper Name</ion-label>
+      <ion-input ngModel name="papername" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" >Add</ion-button>
+  </form>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/addpaper" routerDirection="back">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

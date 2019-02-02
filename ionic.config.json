@@ -1,5 +1,7 @@
 {
   "name": "question24x7-teacher",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

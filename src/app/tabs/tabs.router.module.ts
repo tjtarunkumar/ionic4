@@ -8,42 +8,51 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'papers',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../papers/papers.module#PapersPageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'mypapers',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../my-papers/my-papers.module#MyPapersPageModule'
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'wishlist',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../wishlist/wishlist.module#WishlistPageModule'
+          }
+        ]
+      },
+      {
+        path: 'account',
+        children: [
+          {
+            path: '',
+            loadChildren: '../account/account.module#AccountPageModule'
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/papers',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/papers',
     pathMatch: 'full'
   }
 ];
